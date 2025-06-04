@@ -1,24 +1,60 @@
-# Prosty Analizator Statystyk Opisowych z GUI
+Statystyki Opisowe - Aplikacja GUI
 
-Ten program w Pythonie umożliwia wczytanie danych z pliku arkusza kalkulacyjnego (CSV lub Excel) i obliczenie podstawowych statystyk opisowych dla wybranej kolumny numerycznej. Program posiada prosty graficzny interfejs użytkownika (GUI)
-## Funkcjonalności
+Opis projektu
+--------------
+Aplikacja okienkowa stworzona w Pythonie przy użyciu biblioteki Tkinter, która umożliwia analizę danych z plików CSV i Excel poprzez obliczanie podstawowych statystyk opisowych.
 
-*   **Wczytywanie plików**: Obsługa plików w formatach `.csv`, `.xlsx` oraz `.xls`.
-*   **Wybór kolumny**: Umożliwia wybór kolumny numerycznej z wczytanego pliku, dla której mają zostać obliczone statystyki.
-*   **Obliczanie statystyk**:
-    *   Średnia arytmetyczna
-    *   Mediana
-    *   Odchylenie standardowe (próby)
-    *   Rozstęp (różnica między wartością maksymalną a minimalną)
-*   **Prosty interfejs GUI**: Intuicyjna obsługa dzięki graficznemu interfejsowi.
-*   **Obsługa brakujących danych**: Wartości `NaN` (brakujące dane) w wybranej kolumnie są automatycznie usuwane przed obliczeniami.
-*   **Informacje zwrotne**: Komunikaty o błędach (np. nieprawidłowy typ pliku, brak kolumn numerycznych) oraz o statusie operacji.
+Funkcjonalności
+---------------
+Obsługa plików:
+- CSV (.csv)
+- Excel (.xlsx, .xls)
 
-## Wymagania
+Funkcje analityczne:
+- Automatyczne wykrywanie kolumn numerycznych
+- Średnia arytmetyczna
+- Mediana
+- Odchylenie standardowe
+- Rozstęp
 
-*   Python 3.6+
-*   Biblioteki Pythona:
-    *   `pandas`
-    *   `openpyxl` (do obsługi plików `.xlsx`)
-    *   `tkinter` (zazwyczaj dołączany do standardowej instalacji Pythona)
+Inne:
+- Intuicyjny interfejs użytkownika
+- Wyniki prezentowane w czytelnej formie
 
+Wymagane biblioteki
+--------------------
+- pandas
+- tkinter (wbudowany w Pythona)
+- openpyxl (dla plików Excel)
+
+Instrukcja instalacji
+----------------------
+1. Sprawdź wersję Pythona (wymagana wersja 3.10+):
+- py --version
+2. Jeśli python jest zainstalowany przejdź do punktu 4, jeśli nie idź punkt 3.
+3. Pobierz python ze strony:  https://www.python.org/downloads/. Przejdź punkt 1.
+4. Zainstaluj wymagane biblioteki:
+- py -m pip install pandas
+- py -m pip install openpyxl
+   
+Instrukcja użycia
+------------------
+1. Uruchom program:
+- cd Py-Project
+- py dane.py -- Tworzenie tabeli excel, na której można tworzyć dane.
+- py obliczenia.py -- Odpalenie programu liczącego
+2. W aplikacji:
+- Kliknij "Wczytaj plik" i wybierz plik .csv lub .xlsx/.xls
+- Wybierz kolumnę z listy rozwijanej
+- Kliknij "Oblicz Statystyki", aby zobaczyć wyniki
+
+Uwagi
+------------------
+- Obsługiwane są tylko kolumny numeryczne
+- Wartości niebędące liczbami są automatycznie pomijane
+- Wyniki są zaokrąglane do dwóch miejsc po przecinku
+
+Autorzy
+------------------
+- Rafał Jasiura
+- Michał Zawartka
